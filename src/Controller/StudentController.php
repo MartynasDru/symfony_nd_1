@@ -19,7 +19,7 @@ class StudentController extends Controller
             'controller_name' => 'StudentController',
             'student' => $request->query->get('utm_term'),
             'mentor' => $request->query->get('utm_campaign'),
-            'projectName' => $request->query->get('utm_content')
+            'projectName' => $request->query->get('utm_content'),
         ]);
     }
 

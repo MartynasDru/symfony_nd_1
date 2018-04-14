@@ -7,7 +7,7 @@
         <ul class="list-group">
               {% for projectName,contributors in data %}
                 {% for student in contributors.members %}
-                <li class="list-group-item"><a href="http://127.0.0.1:8000/academy?utm_source=akademija&amp;utm_campaign={{contributors.mentor}}&amp;utm_term={{student}}&amp;utm_content={{projectName}}">{{student}}</a></li>
+                <li class="list-group-item"><a href="/academy?utm_source=akademija&amp;utm_campaign={{contributors.mentor}}&amp;utm_term={{student}}&amp;utm_content={{projectName}}">{{student}}</a></li>
                 {% endfor %}
               {% endfor %}
         </ul>
