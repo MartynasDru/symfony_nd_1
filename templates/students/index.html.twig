@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+
+{% block body %}
+    <h1 class="display-5">Studentai</h1>
+        <ul class="list-group">
+              {% for projectName,contributors in data %}
+                {% for student in contributors.members %}
+                <li class="list-group-item"><a href="http://127.0.0.1:8000/academy?utm_source=akademija&amp;utm_campaign={{contributors.mentor}}&amp;utm_term={{student}}&amp;utm_content={{projectName}}">{{student}}</a></li>
+                {% endfor %}
+              {% endfor %}
+        </ul>
+
+{% endblock %}
