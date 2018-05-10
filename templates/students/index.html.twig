@@ -8,7 +8,7 @@
               {% for projectName,contributors in data %}
                 {% for student in contributors.members %}
                 <li class="list-group-item">
-                  <a href="/academy?utm_source=akademija&amp;utm_campaign={{contributors.mentor}}&amp;utm_term={{student}}&amp;utm_content={{projectName}}">{{student}}</a>
+                  <a href="{{ path('academy', {'utm_source' : 'akademija','utm_campaign':contributors.mentor,'utm_term': student,'utm_content':projectName}) }}">{{student}}</a>
                 </li>
                 {% endfor %}
               {% endfor %}
